@@ -21,7 +21,7 @@ def save_to_json(data, json_file):
         "../../racing-data-munging/data/ergast/",
          json_file
     )
-#    print('saving ' + path)
+    print('saving ' + path)
     with open(path, 'w') as outfile:
         json.dump(data, outfile)
 
