@@ -3,6 +3,7 @@
 An uncompressed dump of the ergast db
 
 Create sqlite3 file:
-'''bash
+
+```bash
 bin/mysql2sqlite ergast_f1db.sql >ergast_f1db.sqlite3
-'''
+```
