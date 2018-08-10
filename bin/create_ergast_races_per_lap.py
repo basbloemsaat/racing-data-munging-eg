@@ -20,9 +20,11 @@ for race in races:
     exec_query(
         query = '''
             SELECT
-                dr.forename
+                dr.driverRef
+                , dr.forename
                 , dr.surname
-                , co.name
+                , co.constructorRef
+                , co.name as constructor
                 , re.grid
                 , re.position
                 , re.laps as laps_run
