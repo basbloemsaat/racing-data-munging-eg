@@ -42,7 +42,7 @@ for race in races:
                 JOIN races ra ON ra.raceId = re.raceId
                 JOIN drivers dr ON dr.driverId = re.driverId
                 JOIN constructors co ON co.constructorId = re.constructorId
-                JOIN laptimes lt ON lt.raceId = re.raceId AND lt.driverId = re.driverId
+                LEFT JOIN laptimes lt ON lt.raceId = re.raceId AND lt.driverId = re.driverId
                 JOIN status st ON st.statusId = re.statusId
                 LEFT JOIN pitstops ps ON ps.raceId = re.raceId  AND ps.driverId = re.driverId AND ps.lap = lt.lap
             WHERE year = ? AND round = ?
